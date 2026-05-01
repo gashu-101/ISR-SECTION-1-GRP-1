@@ -1,0 +1,450 @@
+.I 1
+.T
+experimental investigation of the aerodynamics of a wing in a slipstream .
+.A
+brenckman,m.
+.B
+j. ae. scs. 25, 1958, 324.
+.W
+an experimental study of the aerodynamics of a wing in a slipstream . the effects of the slipstream on the lift and drag coefficients are examined . tests were conducted on a wing with a propeller mounted in front of it . the induced velocity and the dynamic pressure in the slipstream are measured . results show that the lift coefficient increases significantly in the slipstream region .
+.I 2
+.T
+simple shear flow past a flat plate in an incompressible fluid of small viscosity .
+.A
+ting,l.
+.B
+department of aeronautics, brooklyn polytechnic institute, 1958.
+.W
+in the study of high speed aerodynamics the boundary layer flow past a flat plate is considered for small viscosity incompressible fluids . the solution reveals the shear flow characteristics and the velocity distribution near the plate surface . the boundary layer thickness is computed as a function of reynolds number . the drag is proportional to the square root of viscosity .
+.I 3
+.T
+the boundary layer in simple shear flow past a flat plate .
+.A
+kuerti,g.
+.B
+j. ae. scs. 1958.
+.W
+boundary layer theory applied to simple shear flow over a flat plate in a viscous fluid . the classical boundary layer equations are solved for the velocity profile . the shear stress distribution is determined along the plate surface . the results compare well with experimental data from wind tunnel tests .
+.I 4
+.T
+approximate solutions of the incompressible laminar boundary layer equations .
+.A
+morduchow,m.
+.B
+naca tn 3891 1956.
+.W
+approximate methods for solving the laminar boundary layer equations in incompressible flow are presented . the pohlhausen method and momentum integral approach are used to obtain velocity profiles . the skin friction coefficient is computed and compared to the blasius exact solution . good agreement is found for moderate pressure gradients .
+.I 5
+.T
+one-dimensional transient heat conduction into a double-layer slab .
+.A
+langford,d.
+.B
+q. j. mech. appl. math. 10, 1957.
+.W
+the heat conduction problem in a composite slab consisting of two layers is solved analytically using laplace transforms . the temperature distribution as a function of time is obtained . the thermal contact resistance at the interface is included in the formulation . the solution is applicable to problems of thermal protection in aircraft structures .
+.I 6
+.T
+aerodynamic heating and its effect on aircraft structural design .
+.A
+hoff,n.j.
+.B
+j. ae. scs. 23, 1956.
+.W
+aerodynamic heating of aircraft structures at supersonic speeds is analyzed . the stagnation temperature and heat transfer rates to the aircraft skin are calculated . thermal stresses in the wing and fuselage are evaluated . design criteria for high temperature structures are discussed . materials selection for supersonic transport aircraft is considered .
+.I 7
+.T
+note on the application of the linearized theory to hypersonic flow .
+.A
+maccoll,j.w.
+.B
+j. ae. scs. 1957.
+.W
+the applicability of linearized aerodynamic theory to hypersonic flow regimes is examined . the limitations of the theory for mach numbers above 5 are discussed . corrections to the linear theory for hypersonic conditions are derived . comparisons with exact solutions and experimental data are presented .
+.I 8
+.T
+on the compressibility of a gas in the theory of viscous flow .
+.A
+stewartson,k.
+.B
+proc. camb. phil. soc. 52, 1956.
+.W
+the effect of gas compressibility on viscous boundary layer flow is investigated . the energy equation is coupled with the momentum equation for compressible flow . the prandtl number and specific heat ratio enter as parameters . the recovery temperature and adiabatic wall temperature are determined .
+.I 9
+.T
+supersonic flow and shock waves .
+.A
+courant,r.
+.B
+interscience publishers, new york, 1948.
+.W
+a comprehensive treatment of supersonic flow theory and shock wave phenomena . the rankine-hugoniot relations for normal and oblique shocks are derived . expansion fans at convex corners are analyzed using prandtl-meyer theory . the method of characteristics for supersonic flow computation is presented . applications to nozzle design and wing aerodynamics are discussed .
+.I 10
+.T
+the flow of heat in an infinite medium bounded internally by a circular cylinder .
+.A
+jaeger,j.c.
+.B
+q. appl. math. 1956.
+.W
+the classical problem of heat flow in a medium containing a cylindrical inclusion is solved in closed form using bessel functions . the temperature field is expressed as a series solution . the heat flux at the cylinder surface is computed . applications to the cooling of aircraft engines are discussed .
+.I 11
+.T
+theory of wing sections including a summary of airfoil data .
+.A
+abbott,i.h.
+.B
+dover publications, new york, 1959.
+.W
+a comprehensive summary of naca airfoil theory and experimental data is presented . lift, drag, and pitching moment coefficients for naca four and five digit series airfoils are tabulated as functions of angle of attack and mach number . the effect of camber and thickness on aerodynamic characteristics is analyzed . design procedures for airfoil selection are described .
+.I 12
+.T
+the laminar boundary layer on a porous flat plate with uniform suction .
+.A
+iglisch,r.
+.B
+naca tm 1205 1949.
+.W
+uniform suction through a porous flat plate as a means of boundary layer control is analyzed theoretically . the laminar boundary layer equations with suction are solved to obtain the velocity profile . the skin friction coefficient as a function of suction rate is determined . transition to turbulence is delayed by suction .
+.I 13
+.T
+effect of leading edge geometry on the aerodynamic characteristics of delta wings .
+.A
+garner,h.c.
+.B
+aero. res. council r&m 3116, 1960.
+.W
+the influence of leading edge shape on the aerodynamics of delta wings at subsonic and supersonic speeds is investigated experimentally and theoretically . sharp and rounded leading edges are compared . vortex lift at high angles of attack is examined . the leading edge suction force is computed using slender body theory .
+.I 14
+.T
+unsteady supersonic flow over an oscillating flat plate .
+.A
+miles,j.w.
+.B
+j. ae. scs. 22, 1955.
+.W
+the unsteady pressure distribution on a flat plate oscillating in supersonic flow is determined using linearized theory . the aerodynamic forces and moments as functions of reduced frequency are computed . the results are applicable to flutter analysis of supersonic aircraft wings . the piston theory approximation is compared with the exact solution .
+.I 15
+.T
+heat transfer to a flat plate at supersonic speed .
+.A
+van driest,e.r.
+.B
+j. ae. scs. 19, 1952.
+.W
+heat transfer from a compressible turbulent boundary layer to a flat plate at supersonic speeds is analyzed . the recovery factor and stanton number are determined as functions of mach number . the effect of wall cooling on the boundary layer velocity profile is included . correlations for engineering calculations of aerodynamic heating are provided .
+.I 16
+.T
+on the stability of laminar flow over a flat plate .
+.A
+lin,c.c.
+.B
+proc. nat. acad. sci. 1944.
+.W
+the hydrodynamic stability of laminar boundary layer flow over a flat plate is analyzed using the orr-sommerfeld equation . the critical reynolds number for transition to turbulence is determined . neutral stability curves and growth rates for disturbances are computed . the results confirm the existence of tollmien-schlichting waves .
+.I 17
+.T
+the calculation of pressure distribution on a thin wing in subsonic flow .
+.A
+multhopp,h.
+.B
+aero. res. council r&m 2884, 1950.
+.W
+a numerical method for calculating the spanwise pressure distribution on a wing in subsonic incompressible flow is presented . the lifting surface theory is applied to wings of arbitrary planform . the induced drag and lift distribution are computed . the method is validated against experimental pressure measurements .
+.I 18
+.T
+applications of the method of characteristics to supersonic rotational flow .
+.A
+ferri,a.
+.B
+naca tn 1135, 1947.
+.W
+the method of characteristics is extended to handle supersonic flows with entropy gradients (rotational flow) . the calculation procedure accounts for shock-induced entropy variations . nozzle flows and flows around bodies of revolution are computed . the technique is essential for accurate supersonic wind tunnel design .
+.I 19
+.T
+turbulent heat transfer in a boundary layer .
+.A
+eckert,e.r.g.
+.B
+j. ae. scs. 22, 1955.
+.W
+turbulent convective heat transfer in a compressible boundary layer is analyzed . the reynolds analogy between skin friction and heat transfer is examined . corrections for compressibility and property variations are included . the stanton number correlation for turbulent flow is validated against experimental measurements on heated flat plates at various mach numbers .
+.I 20
+.T
+note on the flow of a viscous fluid past a circular cylinder .
+.A
+oseen,c.w.
+.B
+ark. f. mat. astr. och fys. 1910.
+.W
+the classical problem of viscous flow past a circular cylinder is revisited . the oseen approximation to the navier-stokes equations is used to obtain an improved solution valid at low reynolds numbers . the drag coefficient as a function of reynolds number is derived . the result corrects the stokes solution for inertia effects .
+.I 21
+.T
+a study of hypersonic viscous interaction effects on slender blunt bodies .
+.A
+lees,l.
+.B
+j. ae. scs. 23, 1956.
+.W
+viscous interaction effects on the pressure distribution of slender blunt bodies at hypersonic mach numbers are investigated . the merged layer regime and strong interaction regime are distinguished . the effect of viscosity on the shock standoff distance is computed . skin friction and heat transfer rates in hypersonic flow are determined .
+.I 22
+.T
+transonic small disturbance theory for wings .
+.A
+cole,j.d.
+.B
+j. math. phys. 30, 1951.
+.W
+small perturbation theory for transonic flow past thin wings is developed . the transonic similarity rule and the karman-tsien approximation are discussed . the critical mach number for onset of supersonic flow over an airfoil is computed . wind tunnel interference corrections at transonic speeds are analyzed .
+.I 23
+.T
+induced drag of wing-body combinations .
+.A
+lomax,h.
+.B
+naca tn 1349, 1947.
+.W
+the aerodynamic interaction between a wing and a fuselage body is analyzed with respect to induced drag . the distribution of lift between wing and body is determined . the mutual interference on drag is evaluated using slender body theory . design guidelines for minimum drag wing-body combinations are given .
+.I 24
+.T
+the stability of supersonic leading-edge separation .
+.A
+brown,c.e.
+.B
+j. ae. scs. 21, 1954.
+.W
+the stability of the separated flow region ahead of a supersonic wing leading edge is analyzed . the conditions for leading edge separation at supersonic speeds are determined . the effect of sweep angle on leading edge separation is examined . comparisons with schlieren photographs and pressure measurements are made .
+.I 25
+.T
+thermal stresses in plates and shells .
+.A
+boley,b.a.
+.B
+john wiley and sons, new york, 1960.
+.W
+thermal stresses due to non-uniform temperature distributions in thin plates and shells are analyzed using classical theory of elasticity . the thermoelastic equations are derived and applied to aircraft structural panels . thermal buckling of plates under aerodynamic heating is investigated . design methods for preventing thermal failure in high speed aircraft are presented .
+.I 26
+.T
+on the drag of bluff bodies in high reynolds number flow .
+.A
+roshko,a.
+.B
+j. ae. scs. 22, 1955.
+.W
+the drag of bluff bodies at high reynolds numbers where the boundary layer is turbulent is investigated experimentally . the wake structure and base pressure are measured for cylinders and flat plates normal to the flow . the drag coefficient and its variation with reynolds number are determined . applications to aircraft landing gear and external stores are noted .
+.I 27
+.T
+aeroelastic effects on wing flutter .
+.A
+theodorsen,t.
+.B
+naca tn 496 1934.
+.W
+the classical flutter analysis of a two-dimensional airfoil section is presented . the aerodynamic forces on an oscillating airfoil are computed using potential flow theory . the flutter speed as a function of mass ratio and frequency ratio is determined . the critical flutter speed for wing sections is plotted in parameter space .
+.I 28
+.T
+pressure distribution on delta wings at low speeds .
+.A
+peckham,d.h.
+.B
+aero. res. council r&m 3116 1960.
+.W
+experimental measurements of the pressure distribution on delta wings at low subsonic speeds and high angles of attack are presented . the vortex lift mechanism and leading edge vortex formation are described . the total lift including vortex lift is compared to slender body theory . the breakdown of the leading edge vortex at high angles of attack is discussed .
+.I 29
+.T
+turbulent boundary layers in adverse pressure gradients .
+.A
+clauser,f.h.
+.B
+j. ae. scs. 21, 1954.
+.W
+the behavior of turbulent boundary layers subjected to adverse pressure gradients is investigated experimentally . velocity profiles in equilibrium and non-equilibrium boundary layers are measured . separation is observed and the conditions for incipient separation are determined . correlations for turbulent boundary layer development are presented .
+.I 30
+.T
+slender body theory and its application to interference problems .
+.A
+ward,g.n.
+.B
+q. j. mech. appl. math. 2, 1949.
+.W
+slender body theory is developed from the linearized equations of supersonic aerodynamics . the far field flow and the lift, drag, and moment of slender bodies are computed . interference between wings and bodies and between wings in close proximity is analyzed . the theory is applied to missile configurations .
+.I 31
+.T
+measurements of supersonic flow in a two-dimensional nozzle .
+.A
+hall,i.m.
+.B
+aero. res. council r&m 1954.
+.W
+detailed pitot pressure and static pressure measurements in a two-dimensional supersonic nozzle at mach 2 are reported . the boundary layer development on the nozzle walls is measured . non-uniformity of the test section flow is assessed . the results are used to characterize the flow quality in the wind tunnel .
+.I 32
+.T
+on the mechanism of transition from laminar to turbulent flow .
+.A
+schlichting,h.
+.B
+naca tm 1218, 1949.
+.W
+the mechanism of transition from laminar to turbulent boundary layer flow is reviewed from a theoretical perspective . the role of tollmien-schlichting instability waves in triggering transition is described . the effect of free stream turbulence, surface roughness, and pressure gradient on the transition reynolds number is discussed .
+.I 33
+.T
+circulation control by surface blowing .
+.A
+lissaman,p.b.s.
+.B
+j. ae. scs. 1960.
+.W
+circulation control using tangential surface blowing as a high lift device is analyzed theoretically and experimentally . the coanda effect and its role in attaching the blown jet to the surface is described . the incremental lift coefficient due to blowing is related to the momentum coefficient of the blown jet . applications to short takeoff aircraft are discussed .
+.I 34
+.T
+some effects of surface roughness on the aerodynamics of a flat plate .
+.A
+schlichting,h.
+.B
+naca tm 1122, 1937.
+.W
+the effect of distributed surface roughness on the boundary layer development and drag of a flat plate is investigated . the equivalent sand roughness concept is introduced . the drag coefficient increase due to roughness as a function of reynolds number and roughness height is determined . the transition from hydraulically smooth to fully rough flow is analyzed .
+.I 35
+.T
+theoretical and experimental investigation of supersonic jet noise .
+.A
+lighthill,m.j.
+.B
+proc. roy. soc. a 211, 1952.
+.W
+the acoustic analogy theory for noise generated by turbulent jets is presented . lighthill's equation relating the acoustic field to turbulent stresses is derived . the acoustic power radiated by a supersonic jet scales as the eighth power of jet velocity for subsonic jets . the directional distribution of jet noise and its implications for aircraft community noise are analyzed .
+.I 36
+.T
+on the aerodynamics of the oscillating airfoil .
+.A
+wagner,h.
+.B
+z. angew. math. mech. 5, 1925.
+.W
+the unsteady aerodynamic forces on an airfoil suddenly set into motion or oscillating in incompressible flow are analyzed using potential flow theory . the wagner function describing the buildup of circulation after a step change in angle of attack is derived . applications to gust response and buffeting of aircraft are discussed .
+.I 37
+.T
+viscous effects in hypersonic flow over sharp slender cones .
+.A
+probstein,r.f.
+.B
+j. ae. scs. 23, 1956.
+.W
+the effects of viscosity on the aerodynamics of sharp slender cones in hypersonic flow are analyzed . the boundary layer on the cone and its interaction with the outer inviscid flow is examined . the viscous interaction parameter and its role in determining pressure and skin friction distributions is described . comparisons with ballistic range measurements are presented .
+.I 38
+.T
+an analysis of turbulent free convection heat transfer .
+.A
+eckert,e.r.g.
+.B
+trans. asme 76, 1954.
+.W
+turbulent free convection heat transfer from a heated vertical plate is analyzed using similarity methods . the nusselt number correlation for natural convection is derived . the transition from laminar to turbulent free convection is discussed . applications to the cooling of aircraft electronic equipment are noted .
+.I 39
+.T
+pressure distribution and breakdown of vortices on slender wings .
+.A
+mangler,k.w.
+.B
+aero. res. council r&m 1959.
+.W
+the pressure distribution on slender delta wings in subsonic flow is computed using potential flow theory . the conical vortex sheet above the wing is modeled . the breakdown of leading edge vortices at high angles of attack (vortex burst) is analyzed and its effect on the lift is evaluated .
+.I 40
+.T
+remarks on slender-body theory .
+.A
+lighthill,m.j.
+.B
+j. fluid mech. 1, 1956.
+.W
+the foundations of slender body theory for low aspect ratio wings and bodies of revolution in subsonic and supersonic flow are reviewed . the inner and outer expansions and their matching are described . the conditions of validity of the theory and its range of applicability to practical aerodynamic configurations are discussed .
+.I 41
+.T
+the minimum wave drag of aerofoils and wings .
+.A
+jones,r.t.
+.B
+j. ae. scs. 19, 1952.
+.W
+the minimum wave drag of supersonic airfoils and wings for a given lift coefficient or volume is determined using variational calculus . the optimum thickness distribution minimizing wave drag is derived . the jones minimum drag rule for wings is presented . implications for the design of efficient supersonic aircraft are discussed .
+.I 42
+.T
+turbulence in the boundary layer on a rough surface .
+.A
+perry,a.e.
+.B
+j. fluid mech. 5, 1959.
+.W
+turbulent boundary layer structure over rough surfaces is investigated experimentally . velocity profiles using the log-law with a roughness correction are fitted to data . the inner layer scaling and the effect of roughness on the wake parameter are examined . the drag increase due to roughness in the fully turbulent regime is quantified .
+.I 43
+.T
+supercritical wing sections for aircraft .
+.A
+whitcomb,r.t.
+.B
+nasa tn d-7428, 1971.
+.W
+supercritical airfoil sections designed to delay the onset of shock-induced separation at transonic speeds are described . the whitcomb supercritical profile with blunter nose and aft camber is compared to conventional sections . the drag divergence mach number and the buffet boundary are significantly improved . wind tunnel test results at transonic speeds are presented .
+.I 44
+.T
+shock tube studies of aerodynamic heating .
+.A
+resler,e.l.
+.B
+j. ae. scs. 22, 1955.
+.W
+shock tube experiments simulating aerodynamic heating at hypersonic speeds are described . the heat transfer rates to flat plates and spheres in the shock-heated flow are measured using thin-film gauges . the results are compared with theoretical predictions from boundary layer theory . the limitations of shock tube testing for simulating sustained aerodynamic heating are discussed .
+.I 45
+.T
+the vorticity of a turbulent shear flow .
+.A
+townsend,a.a.
+.B
+proc. camb. phil. soc. 45, 1949.
+.W
+the structure of turbulence in a shear flow with particular reference to the vorticity distribution is examined experimentally and theoretically . the large scale structure and the fine scale dissipation are characterized . the energy spectrum of turbulent fluctuations in a boundary layer is measured . implications for turbulence modeling in aerodynamic applications are discussed .
+.I 46
+.T
+effects of sweep and aspect ratio on wing aerodynamics at subsonic and supersonic speeds .
+.A
+puckett,a.e.
+.B
+j. ae. scs. 14, 1947.
+.W
+the aerodynamic characteristics of swept and unswept wings of various aspect ratios are analyzed using linearized theory at subsonic and supersonic speeds . the lift curve slope, induced drag factor, and center of pressure location are computed as functions of sweep, aspect ratio, and mach number . the optimal wing design for minimum drag at a given mach number is determined .
+.I 47
+.T
+an approximate method for the calculation of heat transfer in turbulent flow .
+.A
+van driest,e.r.
+.B
+j. ae. scs. 23, 1956.
+.W
+a practical method for estimating turbulent heat transfer rates in compressible boundary layers is presented . the analogy between heat transfer and skin friction is extended to compressible flow . correction factors for mach number and wall temperature ratio are derived . the method is validated against experimental data and applied to aircraft thermal protection system design .
+.I 48
+.T
+the dynamics of the flow in a laminar separation bubble .
+.A
+gaster,m.
+.B
+aero. res. council r&m 3595, 1967.
+.W
+the structure of the laminar separation bubble that forms on airfoils near the leading edge is investigated experimentally using hot-wire anemometry . the separated shear layer transition and reattachment processes are described . the bubble length as a function of reynolds number and pressure gradient is correlated . bubble bursting and its connection to maximum lift are analyzed .
+.I 49
+.T
+plane sound waves of finite amplitude .
+.A
+riemann,b.
+.B
+abh. ges. wiss. gottingen, 1860.
+.W
+the propagation of finite amplitude sound waves in one dimension is analyzed using the method of characteristics . the riemann invariants for nonlinear wave propagation are introduced . wave steepening and shock formation are described . the results are fundamental to the theory of gas dynamics and aeroacoustics .
+.I 50
+.T
+effect of mach number and reynolds number on the drag of a flat plate .
+.A
+goddard,f.e.
+.B
+j. ae. scs. 26, 1959.
+.W
+the combined effects of mach number and reynolds number on the drag coefficient of a flat plate in compressible flow are investigated experimentally . laminar, transitional, and turbulent boundary layer drag are measured . the strong and weak interaction regimes at hypersonic mach numbers are identified . the data are correlated using the van driest effective velocity transformation .

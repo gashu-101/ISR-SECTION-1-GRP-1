@@ -5,9 +5,9 @@ import math
 from operator import itemgetter
 import string
 import dill
+import os
 
 es = Elasticsearch()
-
 
 s = Search().using(es).query("match_all")
 s.aggs.bucket("avg_size", "avg", field="doc_len")
@@ -17,6 +17,11 @@ D = 84678
 avgDocLen = 20969809/84660 #res.aggregations.avg_size.value
 V = res.aggregations.vocabSize.value
 print(V)
+
+_BASE_DIR = os.path.dirname(__file__)
+
+def _out_path(filename):
+    return os.path.join(_BASE_DIR, filename)
 
 def Total_okapiTF(qNo, termVector):
     docScore = []
@@ -29,7 +34,7 @@ def Total_okapiTF(qNo, termVector):
             tf += (tfwd/(tfwd + 0.5 + (1.5 * (docLen/avgDocLen))))
         docScore.append([docid, tf])
     docScore.sort(key=itemgetter(1), reverse=True)
-    with open('/Users/Zion/Desktop/Desktop - Zion/NEU/Sem 2/Information Retrieval/HW6/OkapiTF_Results_File.txt', 'a+') as queryResults:
+    with open(_out_path('OkapiTF_Results_File.txt'), 'a+', encoding='utf-8', errors='replace') as queryResults:
         rank = 1
         for ds in docScore:
             queryResults.write('%d Q0 %s %d %lf Exp\n' % (int(qNo), ds[0], rank, ds[1]))
@@ -47,7 +52,7 @@ def TF_IDF(qNo, termVector, docFreq):
             tf += ((tfwd / (tfwd + 0.5 + (1.5 * (docLen / avgDocLen)))) * (math.log10(D/list(filter(lambda x:x[0]==key, docFreq))[0][1])))
         docScore.append([docid, tf])
     docScore.sort(key=itemgetter(1), reverse=True)
-    with open('/Users/Zion/Desktop/Desktop - Zion/NEU/Sem 2/Information Retrieval/HW6/TF-IDF_Results_File.txt', 'a+') as queryResults:
+    with open(_out_path('TF-IDF_Results_File.txt'), 'a+', encoding='utf-8', errors='replace') as queryResults:
         rank = 1
         for ds in docScore:
             queryResults.write('%s Q0 %s %d %lf Exp\n' % (qNo, ds[0], rank, ds[1]))
@@ -72,7 +77,7 @@ def Okapi_BM25(qNo, termVector, docFreq):
             bm25 += op1 * op2 * op3
         docScore.append([docid, bm25])
     docScore.sort(key=itemgetter(1), reverse=True)
-    with open('/Users/Zion/Desktop/Desktop - Zion/NEU/Sem 2/Information Retrieval/HW6/OkapiBM25_Results_File.txt', 'a+') as queryResults:
+    with open(_out_path('OkapiBM25_Results_File.txt'), 'a+', encoding='utf-8', errors='replace') as queryResults:
         rank = 1
         for ds in docScore:
             queryResults.write('%s Q0 %s %d %lf Exp\n' % (qNo, ds[0], rank, ds[1]))
@@ -96,17 +101,18 @@ def UnigramLM_Laplace(qNo, termVector):
                 docLen = dict[word][1]
                 score = float(tfwd + 1) / float(docLen + V)
             else:
-                docLen = dict[dict.keys()[0]][1]
+                docLen = dict[next(iter(dict))][1]
                 score = float(1) / float(docLen + V)
             if docid not in docScoreDict:
                 docScoreDict[docid] = 0.0
             docScoreDict[docid] += math.log(score)
+
     DocScore = []
     for score_key in docScoreDict.keys():
         DocScore.append((score_key, docScoreDict[score_key]))
     DocScore.sort(key=itemgetter(1), reverse=True)
 
-    with open('/Users/Zion/Desktop/Desktop - Zion/NEU/Sem 2/Information Retrieval/HW6/UnigramLMLaplace_Results_File.txt', 'a+') as queryResults:
+    with open(_out_path('UnigramLMLaplace_Results_File.txt'), 'a+', encoding='utf-8', errors='replace') as queryResults:
         rank = 1
         for ds in DocScore:
             queryResults.write('%s Q0 %s %d %f Exp\n' % (qNo, ds[0], rank, ds[1]))
@@ -128,20 +134,21 @@ def UnigramLM_JelinekMercer(qNo, termVector):
             if word in dict:
                 tfwd = dict[word][0]
                 docLen = dict[word][1]
-                pML = (filter(lambda x: x[1] == word, cTF)[0][0]) / V
+                pML = (list(filter(lambda x: x[1] == word, cTF))[0][0]) / V
                 score = float(l * float(tfwd / docLen)) + (float(1 - l) * pML)
             else:
-                docLen = dict[dict.keys()[0]][1]
-                pML = (filter(lambda x: x[1] == word, cTF)[0][0]) / V
+                docLen = dict[next(iter(dict))][1]
+                pML = (list(filter(lambda x: x[1] == word, cTF))[0][0]) / V
                 score = (float(1 - l) * pML)
             if docid not in docScoreDict:
                 docScoreDict[docid] = 0.0
             docScoreDict[docid] += math.log(score)
+
     DocScore = []
     for score_key in docScoreDict.keys():
         DocScore.append((score_key, docScoreDict[score_key]))
     DocScore.sort(key=itemgetter(1), reverse=True)
-    with open('/Users/Zion/Desktop/Desktop - Zion/NEU/Sem 2/Information Retrieval/HW6/UnigramLMJM_Results_File.txt', 'a+') as queryResults:
+    with open(_out_path('UnigramLMJM_Results_File.txt'), 'a+', encoding='utf-8', errors='replace') as queryResults:
         rank = 1
         for ds in DocScore:
             queryResults.write('%s Q0 %s %d %lf Exp\n' % (qNo, ds[0], rank, ds[1]))
@@ -153,7 +160,7 @@ def queryNums():
     f = open('Files/QueryUpdated.txt', 'r')
     queries = []
     for line in f:
-        queries.append(line.split()[0].translate(None, string.punctuation))
+        queries.append(line.split()[0].translate(str.maketrans('', '', string.punctuation)))
     return queries
 
 qNums = queryNums()

@@ -6,6 +6,7 @@ from collections import defaultdict
 from string import digits
 import string
 import dill
+import os
 
 es = Elasticsearch()
 
@@ -25,9 +26,21 @@ def getTermVector(keyword, a, key):
 
 
 def queryProcessor(query):
-    with open("/Users/Zion/Downloads/AP_DATA/stoplist.txt") as sfile:
+    base_dir = os.path.dirname(__file__)
+    candidate_paths = [
+        os.path.join(base_dir, "..", "HW2", "Files", "stoplist.txt"),
+        os.path.join(base_dir, "..", "AP_DATA", "stoplist.txt"),
+        os.path.join(base_dir, "stoplist.txt"),
+    ]
+    stoplist_path = next((p for p in candidate_paths if os.path.exists(p)), None)
+    if stoplist_path is None:
+        raise FileNotFoundError(
+            "stoplist.txt not found. Expected one of: " + ", ".join(candidate_paths)
+        )
+
+    with open(stoplist_path, "r", encoding="utf-8", errors="replace") as sfile:
         stopWords = sfile.readlines()
-    stopWords = filter(None, stopWords)
+    stopWords = list(filter(None, stopWords))
     keywords = ""
     flag = 0
     for word in query.split():
@@ -38,7 +51,7 @@ def queryProcessor(query):
         if (flag != 1):
             keywords += word + " "
         flag = 0
-    keywords = keywords.translate(None, string.punctuation)
+    keywords = keywords.translate(str.maketrans('', '', string.punctuation))
     return keywords.strip()
 
 
@@ -55,7 +68,7 @@ def getParameters(query, qNo):
     termVector = defaultdict(lambda: defaultdict(list))
     for key in keywords.split():
         docInfo, docFreq = getDocInfo(key, docFreq)
-        print docFreq
+        print(docFreq)
         for docid in docInfo:
             stemKey = es.indices.analyze(index='index1', analyzer='my_english', text=key)
             a = es.termvectors(index="index1", doc_type="document", id=docid, term_statistics=True)["term_vectors"] \
@@ -77,7 +90,7 @@ def queryMaker():
     f = open('Files/QueryUpdated.txt', 'r')
     queries = []
     for line in f:
-        queries.append(re.sub('\s+', ' ', line).strip().translate(None, digits))
+        queries.append(re.sub('\\s+', ' ', line).strip().translate(str.maketrans('', '', digits)))
     return queries
 
 

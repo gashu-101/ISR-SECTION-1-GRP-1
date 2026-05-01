@@ -27,7 +27,7 @@ def buildTopDocs(resultFile, model):
     f = open(resultFile)
     if model == 'BM25':
         topBM25 = buildDict(f)
-    elif 'QREL':
+    elif model == 'QREL':
         topQREL = buildDict(f)
     f.close()
 

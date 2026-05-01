@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 import pandas
 from sklearn import linear_model
 from sklearn import model_selection
-from sklearn.preprocessing import Imputer
+from sklearn.impute import SimpleImputer
 from sklearn.metrics import accuracy_score
 from sklearn import preprocessing
 from operator import itemgetter
@@ -94,6 +94,7 @@ def getAccuracy(txtFile, csvFile):
             # print(name, dataset[name].notnull().sum())
     # fill_NaN = Imputer(missing_values=np.nan, strategy='mean', axis=1)
     # imputed_DF = pandas.DataFrame(fill_NaN.fit_transform(dataset))
+
     # imputed_DF.columns = dataset.columns
     # imputed_DF.index = dataset.index
     array = dataset.values
@@ -110,8 +111,7 @@ def getAccuracy(txtFile, csvFile):
     for i in range(0, len(names)):
         Y = le.fit_transform(Y)
     print(Y)
-    fill_NaN = Imputer()
-    # fill_NaN = Imputer(missing_values=np.nan, strategy='mean', axis=1)
+    fill_NaN = SimpleImputer()
     imputed_DF = pandas.DataFrame(fill_NaN.fit_transform(X))
     # imputed_DF.columns = X.columns
     # imputed_DF.index = X.index

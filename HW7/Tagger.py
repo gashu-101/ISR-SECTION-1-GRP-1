@@ -15,5 +15,6 @@ for file in Files:
         #     with open("Files/" + file, 'w') as wf:
         #         wf.writelines(line+rest)
         #     wf.close()
-    f.close()
+        pass
+
 

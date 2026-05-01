@@ -4,6 +4,7 @@ import math
 from string import digits
 import string
 import dill
+import os
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search
 import csv
@@ -69,7 +70,20 @@ def getDocScoreFromRM(rmFile, ds):
     f.close()
 
 def queryProcessor(query):
-    with open("/Users/Zion/Downloads/AP_DATA/stoplist.txt") as sfile:
+    base_dir = os.path.dirname(__file__)
+    candidate_paths = [
+        os.path.join(base_dir, "..", "HW2", "Files", "stoplist.txt"),
+        os.path.join(base_dir, "..", "AP_DATA", "stoplist.txt"),
+        os.path.join(base_dir, "stoplist.txt"),
+    ]
+
+    stoplist_path = next((p for p in candidate_paths if os.path.exists(p)), None)
+    if stoplist_path is None:
+        raise FileNotFoundError(
+            "stoplist.txt not found. Expected one of: " + ", ".join(candidate_paths)
+        )
+
+    with open(stoplist_path, "r", encoding="utf-8", errors="replace") as sfile:
         stopWords = sfile.readlines()
     stopWords = list(filter(None, stopWords))
     keywords = ""
