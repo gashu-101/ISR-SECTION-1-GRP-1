@@ -1,3 +1,82 @@
+# Information Retrieval Assignments
+
+## Group Information
+
+**Group:** Group-1
+
+**Section:** Section 1
+
+**School:** School of Information Systems
+
+**Students**
+
+| No. | Student Name | Student Id |
+| --- | --- | --- |
+| 1 | Nebiyu Gelagay | UGR/6259/17 |
+| 2 | Neimah Jemal | UGR/0407/17 |
+| 3 | Gashahun W/Yohannes | UGR/5241/15 |
+| 4 | Fitsum Fisha | UGR/2785/17 |
+| 5 | Betelhem Tadele | UGR/0716/15 |
+| 6 | Abraham Kassaye | UGR/4875/17 |
+
+## Repository Structure
+
+- **HW1/**
+  - Elasticsearch-based indexing and classic retrieval models (Okapi TF, TF-IDF, BM25, LM).
+- **HW2/**
+  - Custom inverted index replacing Elasticsearch, stemming/stopword experiments, proximity model.
+- **HW4/**
+  - Graph-based ranking algorithms (PageRank, HITS).
+- **HW5/**
+  - TREC-style preparation and evaluation utilities (MAP, nDCG, P@k, etc.).
+- **HW6/**
+  - Feature matrix generation and ML-related scripts.
+- **HW7/**
+  - Feature extraction and ML/classification utilities (e.g., email filtering/tagging).
+- **HW8/**
+  - Unsupervised analysis (topic modeling / clustering/partitioning).
+- **cran/**
+  - Cranfield 1400 benchmark dataset:
+    - `cran.all.1400` (documents)
+    - `cran.qry` (queries)
+    - `cranqrel` + `cranqrel.readme` (relevance judgements, Cleverdon relevance codes)
+
+## Datasets
+
+- **AP89 / TREC AP89**
+  - Used by HW1/HW2 as described below.
+  - Requires downloading `AP89_DATA.zip` and running indexing + query processing.
+
+- **Cranfield 1400 (practice benchmark)**
+  - Included under `cran/`.
+  - `cranqrel.readme` defines the 3rd column (Cleverdon relevance code: 1..4; 5 means nonrelevant).
+  - Some lines in `cranqrel` end with `-1` and are delimiters; ignore them when building qrels.
+
+## High-Level Execution Process
+
+### HW1 (Elasticsearch)
+
+1. Install and start Elasticsearch.
+2. Run `HW1/Create_Index.py` to index the corpus.
+3. Run `HW1/Query_Processing.py` to extract TF/DF/TTF stats and create pickles.
+4. Run `HW1/Retrieval_Models.py` to generate one run file per retrieval model.
+5. Evaluate runs using `trec_eval` (or `HW5/Trec_Eval.py` with compatible qrels format).
+
+### HW2 (Custom Inverted Index)
+
+1. Build indexes:
+   - `HW2/Unstemmed_With_Stopwords_Index-1.py`
+   - `HW2/Stemmed_Stopwords_Removed_Index-1.py`
+2. Run query processing + retrieval models for stemmed/unstemmed variants.
+3. Run proximity variants if required.
+4. Evaluate using `trec_eval` or the HW5 evaluation scripts.
+
+### HW4–HW8
+
+Each homework folder contains its own scripts. Refer to `HW*/report.md` (or the homework folder README) for what inputs are expected and what outputs are produced.
+
+---
+
 # Information Retrieval - HW1
 
 Implement and compare various retrieval systems using vector space models and language models.
@@ -118,3 +197,4 @@ To perform an evaluation, run:
 The ```-q``` option shows a summary average evaluation across all queries, followed by individual evaluation results for each query; without the ```-q``` option, you will see only the summary average. The trec_eval program provides a wealth of statistics about how well the uploaded file did for those queries, including average precision, precision at various recall cut-offs, and so on.
 
 You should evaluate using the QREL file named qrels.adhoc.51-100.AP89.txt, included in the data .zip file.
+"# ISR-SECTION-1-GRP-1" 
