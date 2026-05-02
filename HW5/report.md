@@ -43,9 +43,28 @@ A student manual report (from `Reports/`) describes Cranfield evaluation and Cle
 - `cran.qry`
 - `cranqrel`
 
-However, the **HW5 scripts in the main repo are not currently wired to Cranfield** (they reference AP89-like qrels and Elasticsearch usage). If you want HW5 evaluation on Cranfield, you would:
-- parse `cranqrel` into qrels format (binary or graded), and
-- generate run files for the Cranfield queries.
+## Cranfield end-to-end run (included dataset)
+
+This repository includes the Cranfield dataset under `cran/`. To run a complete Cranfield retrieval + evaluation pipeline and generate real metric numbers:
+
+```bash
+python HW5/run_cranfield.py
+```
+
+Outputs:
+- `results/cranfield/*.run.txt`
+- `results/cranfield/eval.json`
+- `results/cranfield/eval.md`
+
+### Cranfield evaluation results (binary relevance: grades 1–4)
+
+| Model | MAP | R-Prec | nDCG | P@5 | P@10 |
+|---|---:|---:|---:|---:|---:|
+| OkapiTF | 0.6435 | 0.5480 | 0.8771 | 0.6933 | 0.4933 |
+| TFIDF | 0.6379 | 0.5558 | 0.8738 | 0.6667 | 0.4933 |
+| BM25 | 0.6267 | 0.5487 | 0.8624 | 0.6667 | 0.4933 |
+| LM_Laplace | 0.6657 | 0.5575 | 0.8607 | 0.7200 | 0.4733 |
+| LM_JM | 0.6246 | 0.5320 | 0.8330 | 0.6133 | 0.4867 |
 
 ## Results
 Metric values depend on the run files provided and the qrels used.

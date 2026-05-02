@@ -14,3 +14,12 @@ If HW3 is expected (e.g., web crawling / indexing / link graph construction), ad
 - implementation details
 - execution steps
 - evaluation and results
+
+## Cranfield end-to-end reference (HW1–HW5)
+This repository includes a working Cranfield retrieval + evaluation pipeline (HW1-style models) implemented in:
+
+```bash
+python HW5/run_cranfield.py
+```
+
+Outputs are written to `results/cranfield/`.

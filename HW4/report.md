@@ -56,3 +56,8 @@ Because the required input files / ES index are not shipped here, running HW4 re
 
 ## Notes
 A student manual report in `Reports/` referenced Cranfield-based experiments for HW4/HW5; however, the **main repo HW4 scripts are currently wired to WT2G / ES crawl inputs**, not Cranfield. If you want Cranfield-based HW4, the HW4 scripts would need to be adapted to a Cranfield citation graph input.
+
+## Cranfield end-to-end results reference
+HW4 is **link analysis** and is separate from the Cranfield retrieval/evaluation pipeline. For Cranfield retrieval model runs and real evaluation numbers (HW1-style models evaluated on Cranfield), see:
+- `python HW5/run_cranfield.py`
+- Output directory: `results/cranfield/`

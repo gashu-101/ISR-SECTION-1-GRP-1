@@ -38,6 +38,29 @@ HW1 implements classic ad‑hoc retrieval models on the **TREC AP89** newswire c
 5. Evaluate with `trec_eval`:
    - `trec_eval qrels.adhoc.51-100.AP89.txt <run_file>`
 
+## Cranfield end-to-end (no Elasticsearch)
+
+This repository includes the Cranfield dataset under `cran/`. To run HW1-style retrieval models end-to-end on Cranfield and generate real evaluation numbers:
+
+```bash
+python HW5/run_cranfield.py
+```
+
+Outputs:
+- `results/cranfield/*.run.txt` (TREC-format run files)
+- `results/cranfield/eval.json`
+- `results/cranfield/eval.md`
+
+### Cranfield evaluation results (binary relevance: grades 1–4)
+
+| Model | MAP | R-Prec | nDCG | P@5 | P@10 |
+|---|---:|---:|---:|---:|---:|
+| OkapiTF | 0.6435 | 0.5480 | 0.8771 | 0.6933 | 0.4933 |
+| TFIDF | 0.6379 | 0.5558 | 0.8738 | 0.6667 | 0.4933 |
+| BM25 | 0.6267 | 0.5487 | 0.8624 | 0.6667 | 0.4933 |
+| LM_Laplace | 0.6657 | 0.5575 | 0.8607 | 0.7200 | 0.4733 |
+| LM_JM | 0.6246 | 0.5320 | 0.8330 | 0.6133 | 0.4867 |
+
 ## Output format
 All run files follow TREC format:
 ```

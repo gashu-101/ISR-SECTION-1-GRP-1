@@ -57,6 +57,26 @@ These scripts tokenize queries consistently with the index variant and generate 
 3. Run retrieval models to produce run files.
 4. Evaluate using `trec_eval` (or the evaluation scripts in HW5).
 
+## Cranfield end-to-end (practice)
+
+To validate the retrieval + evaluation pipeline end-to-end using the included Cranfield dataset (no Elasticsearch needed), run:
+
+```bash
+python HW5/run_cranfield.py
+```
+
+This generates run files and evaluation outputs under `results/cranfield/`.
+
+### Cranfield evaluation results (binary relevance: grades 1–4)
+
+| Model | MAP | R-Prec | nDCG | P@5 | P@10 |
+|---|---:|---:|---:|---:|---:|
+| OkapiTF | 0.6435 | 0.5480 | 0.8771 | 0.6933 | 0.4933 |
+| TFIDF | 0.6379 | 0.5558 | 0.8738 | 0.6667 | 0.4933 |
+| BM25 | 0.6267 | 0.5487 | 0.8624 | 0.6667 | 0.4933 |
+| LM_Laplace | 0.6657 | 0.5575 | 0.8607 | 0.7200 | 0.4733 |
+| LM_JM | 0.6246 | 0.5320 | 0.8330 | 0.6133 | 0.4867 |
+
 ## Evaluation
 - Use `trec_eval` with AP89 qrels (`qrels.adhoc.51-100.AP89.txt`).
 - Compare retrieval effectiveness across stemming/stopword variants.

@@ -39,7 +39,7 @@
   - Cranfield 1400 benchmark dataset:
     - `cran.all.1400` (documents)
     - `cran.qry` (queries)
-    - `cranqrel` + `cranqrel.readme` (relevance judgements, Cleverdon relevance codes)
+    - `cranqrel` (relevance judgements; see below for column semantics)
 
 ## Datasets
 
@@ -49,10 +49,24 @@
 
 - **Cranfield 1400 (practice benchmark)**
   - Included under `cran/`.
-  - `cranqrel.readme` defines the 3rd column (Cleverdon relevance code: 1..4; 5 means nonrelevant).
-  - Some lines in `cranqrel` end with `-1` and are delimiters; ignore them when building qrels.
+  - `cranqrel` uses the standard TREC-style layout: `<query_id> 0 <doc_id> <grade>`.
+  - The second column is always `0` (placeholder). The **third column is `doc_id`** and the **fourth column is the relevance grade**.
+  - Grades **1–4** indicate relevant documents (with 1 being highest relevance). Grade **5** (if present in other variants) indicates nonrelevant.
 
 ## High-Level Execution Process
+
+### Cranfield end-to-end (HW1-style models + evaluation)
+
+To run retrieval models end-to-end on the included Cranfield dataset and generate real evaluation numbers:
+
+```bash
+python HW5/run_cranfield.py
+```
+
+Outputs:
+- `results/cranfield/*.run.txt`
+- `results/cranfield/eval.json`
+- `results/cranfield/eval.md`
 
 ### HW1 (Elasticsearch)
 

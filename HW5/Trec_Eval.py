@@ -7,7 +7,7 @@ def retrieveQueryResults(rankList):
     with open(rankList, 'r') as f:
         for queryResult in f:
             # items = queryResult.split('\t')
-            items = queryResult.split(' ')
+            items = queryResult.split()
             queryID = items[0]
             documentID = items[2]
             if queryID in queryResults:
@@ -21,11 +21,19 @@ def getRevelanceJudgements(qrel):
     with open(qrel, 'r') as f:
         for judgement in f:
             # cols = judgement.split('\t')
-            cols = judgement.split(' ')
+            cols = judgement.split()
             queryID = cols[0]
             documentID = cols[2]
             relevance = cols[3].strip()
-            if relevance == '1':
+            # Treat any positive integer relevance as relevant.
+            # This keeps AP89 compatibility (where relevance is typically 0/1)
+            # and also supports Cranfield grades (1..4 relevant).
+            try:
+                rel_val = int(relevance)
+            except ValueError:
+                rel_val = 0
+
+            if rel_val > 0:
                 if queryID in relevanceJudgements:
                     relevanceJudgements[queryID].append(documentID)
                 else:
