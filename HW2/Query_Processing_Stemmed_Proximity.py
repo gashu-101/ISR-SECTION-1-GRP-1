@@ -4,9 +4,24 @@ from stemming.porter2 import stem
 from string import digits
 import re
 import time
-from Stemmed_Stopwords_Removed_Index import TermVector
+import os
+import importlib.util
 from collections import OrderedDict
 import dill
+
+
+def _load_termvector_class():
+    base_dir = os.path.dirname(__file__)
+    target = os.path.join(base_dir, 'Stemmed_Stopwords_Removed_Index-1.py')
+    spec = importlib.util.spec_from_file_location('Stemmed_Stopwords_Removed_Index_1', target)
+    mod = importlib.util.module_from_spec(spec)
+    if spec is None or spec.loader is None:
+        raise ImportError('Unable to load TermVector from ' + target)
+    spec.loader.exec_module(mod)
+    return mod.TermVector
+
+
+TermVector = _load_termvector_class()
 
 def unpickler(file):
     f = open(file, 'rb')
@@ -26,13 +41,24 @@ def queryMaker():
     f = open('ProximityQueryModel.txt', 'r')
     queries = []
     for line in f:
-        queries.append(re.sub('[\-\.\"\s]+', ' ', line).strip().translate(None, digits))
+        queries.append(re.sub(r'[\-\.\"\s]+', ' ', line).strip().translate(str.maketrans('', '', digits)))
     return queries
 
 def queryProcessor(query):
-    with open("/Users/Zion/Downloads/AP_DATA/stoplist.txt") as sfile:
+    base_dir = os.path.dirname(__file__)
+    candidate_paths = [
+        os.path.join(base_dir, 'Files', 'stoplist.txt'),
+        os.path.join(base_dir, '..', 'HW2', 'Files', 'stoplist.txt'),
+        os.path.join(base_dir, '..', 'AP_DATA', 'stoplist.txt'),
+    ]
+
+    stoplist_path = next((p for p in candidate_paths if os.path.exists(p)), None)
+    if stoplist_path is None:
+        raise FileNotFoundError('stoplist.txt not found. Expected one of: ' + ', '.join(candidate_paths))
+
+    with open(stoplist_path, 'r', encoding='utf-8', errors='replace') as sfile:
         stopWords = sfile.readlines()
-    stopWords = filter(None, stopWords)
+    stopWords = list(filter(None, stopWords))
     keywords = ""
     flag = 0
     for word in query.split():
@@ -43,7 +69,7 @@ def queryProcessor(query):
         if (flag != 1):
             keywords += word + " "
         flag = 0
-    keywords = keywords.translate(None, string.punctuation)
+    keywords = keywords.translate(str.maketrans('', '', string.punctuation))
     return keywords.strip()
 
 def getInfo(key, catalog, termMap, docMap):

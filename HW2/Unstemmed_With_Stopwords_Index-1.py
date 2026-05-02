@@ -46,17 +46,17 @@ class CatalogTerm:
 def tokenizer(text):
     posToken = []
     i = 0
-    tokens = re.split("[^\w\.]*", text) #split on anything apart from words and periods.
+    tokens = re.split(r"[^\w\.]*", text) #split on anything apart from words and periods.
     for token in tokens:
         if token.__contains__("reputaion"):
-            print 'hi'
+            print('hi')
         token = re.sub(r'\.(?=\s)', '', token).rstrip('.')
         if token.__contains__('.'):
             chars = token.split('.')
             for c in chars:
                 if not c.isdigit():
                     if len(c) > 1:
-                        token = re.sub('\.', ' ', token)
+                        token = re.sub(r'\.', ' ', token)
                         break
                 else:
                     break
@@ -114,18 +114,18 @@ def getText(doc):
 
 
 def cleanText(text):
-    text = regex.sub("[^\P{P}\-.,%]+", "", text)
+    text = regex.sub(r"[^\P{P}\-.,%]+", "", text)
     text = text.replace("`", " ")
     text = text.replace("-", " ")
     text = text.replace(",", " ")
-    text = re.sub('\.\.+', ' ', text)
+    text = re.sub(r'\.\.+', ' ', text)
     return text
 
 
 def getDocLen(text):
     count = 0
     for line in text.splitlines():
-        word = re.sub('\s+', ' ', line).strip().split(' ')
+        word = re.sub(r'\s+', ' ', line).strip().split(' ')
         count += len(word)
     return count
 
@@ -142,7 +142,7 @@ def getTokens():
     invFile = 1
     for filename in os.listdir(path):
         fileIter += 1
-        print 'Processing ' + str(fileIter) + ' out of ' + str(fileCount) + ' docs: ' + filename
+        print('Processing ' + str(fileIter) + ' out of ' + str(fileCount) + ' docs: ' + filename)
         # if (filename == 'ap890608'):
         if (filename != 'readme'):
             file = open(path + filename)
