@@ -1,24 +1,4 @@
-# Information Retrieval Assignments
-
-## Group Information
-
-**Group:** Group-1
-
-**Section:** Section 1
-
-**School:** School of Information Systems
-
-**Students**
-
-| No. | Student Name | Student Id |
-| --- | --- | --- |
-| 1 | Nebiyu Gelagay | UGR/6259/17 |
-| 2 | Neimah Jemal | UGR/0407/17 |
-| 3 | Gashahun W/Yohannes | UGR/5241/15 |
-| 4 | Fitsum Fisha | UGR/2785/17 |
-| 5 | Betelhem Tadele | UGR/0716/15 |
-| 6 | Abraham Kassaye | UGR/4875/17 |
-
+# Information Retrieval
 ## Repository Structure
 
 - **HW1/**
@@ -212,3 +192,25 @@ The ```-q``` option shows a summary average evaluation across all queries, follo
 
 You should evaluate using the QREL file named qrels.adhoc.51-100.AP89.txt, included in the data .zip file.
 "# ISR-SECTION-1-GRP-1" 
+
+
+## Group Information
+
+**Group:** Group-1
+
+**Section:** Section 1
+
+**School:** School of Information Systems
+
+**Students**
+
+| No. | Student Name | Student Id |
+| --- | --- | --- |
+| 1 | Nebiyu Gelagay | UGR/6259/17 |
+| 2 | Neimah Jemal | UGR/0407/17 |
+| 3 | Gashahun W/Yohannes | UGR/5241/15 |
+| 4 | Fitsum Fisha | UGR/2785/17 |
+| 5 | Betelhem Tadele | UGR/0716/15 |
+| 6 | Abraham Kassaye | UGR/4875/17 |
+
+
